@@ -11,6 +11,7 @@ languages:
   - en
   - es
   - ru
+
 # Destination directory
 # ---------------------
 # This identifies a directory to hold the "built" files. The default is '_site'.
@@ -50,14 +51,13 @@ inputs:
     path_pattern: meta/*-*.yml
     # This specifies whether or not to use Git to calculate the "last updated"
     # dates for data files.
-    git: false
+    git: true
     # This specifies an alternate folder to look in for Git-versioned data files,
     # when calculating the "last updated" dates for data files. This defaults to
     # "data" (the folder where the data files actually exist.) Most sites will not
     # need to change this setting. It is intended for sites where the data needs
     # to be "built" before being processed by sdg-build.
     git_data_dir: data
-  
 
 # Translations
 # ------------
@@ -71,8 +71,7 @@ inputs:
 translations:
   # This pulls in translations from a Git repository.
   - class: TranslationInputSdgTranslations
-    source: https://github.com/RafaelMartinSerrano/translations.git
-  
+    source: https://github.com/RafaelMartinSerrano/translations
     branch: 2.3.0-dev
   # This pulls in translations from a local 'translations' folder.
   - class: TranslationInputYaml
