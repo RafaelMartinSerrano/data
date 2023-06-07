@@ -11,7 +11,6 @@ languages:
   - en
   - es
   - ru
-
 # Destination directory
 # ---------------------
 # This identifies a directory to hold the "built" files. The default is '_site'.
@@ -58,7 +57,8 @@ inputs:
     # need to change this setting. It is intended for sites where the data needs
     # to be "built" before being processed by sdg-build.
     git_data_dir: data
- 
+  - class: InputSdmxMeta
+    meta_suffix: __GLOBAL
 
 # Translations
 # ------------
@@ -72,8 +72,8 @@ inputs:
 translations:
   # This pulls in translations from a Git repository.
   - class: TranslationInputSdgTranslations
-    source: https://github.com/RafaelMartinSerrano/translations
-    tag: 2.3.0-dev
+    source: https://github.com/open-sdg/sdg-translations.git
+    tag: 2.2.0
   # This pulls in translations from a local 'translations' folder.
   - class: TranslationInputYaml
     source: translations
