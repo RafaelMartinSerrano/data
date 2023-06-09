@@ -16,20 +16,30 @@
             "title": "Year"
           },
           {
-            "name": "Group",
+            "name": "Gender",
             "type": "string",
             "constraints": {
               "enum": [
-                "A",
-                "B",
+                "Women",
+                "Men",
                 ""
               ]
             },
-            "title": "Group"
+            "title": "Gender"
+          },
+          {
+            "name": "Age",
+            "type": "number",
+            "constraints": {
+              "enum": [
+                ""
+              ]
+            },
+            "title": "Age"
           },
           {
             "name": "Value",
-            "type": "integer",
+            "type": "number",
             "title": "Value"
           }
         ]
